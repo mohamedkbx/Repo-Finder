@@ -6,5 +6,7 @@ const buttonElement = document.querySelector(".button");
 const searchInput = document.querySelector(".input");
 // Checkbox Element
 const userInputElement = document.querySelector("input[value='users']");
+//message Element
+const messageElement = document.querySelector(".message");
 
-export { cardElements, buttonElement, searchInput, userInputElement };
+export { cardElements, buttonElement, searchInput, userInputElement, messageElement };
