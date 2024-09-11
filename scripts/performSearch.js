@@ -1,4 +1,5 @@
 import getMessage from "./getMessage";
+import setLoadingState from "./setLoadingState";
 import setMessage from "./setMessage";
 import { setSearchResult } from "./setSearchResult";
 
@@ -11,7 +12,10 @@ export const performSearch = (searchTerm, isUserSelected) => {
     setMessage("Please enter a valid search term");
     return;
   }
+
+  setLoadingState(true);
   fetch(`${USERS_API}${searchTerm}${typyQuery}`)
     .then((response) => response.json())
-    .then((response) => setSearchResult(response.items));
+    .then((response) => setSearchResult(response.items))
+    .finally(() => setLoadingState(false));
 };

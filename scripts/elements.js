@@ -8,5 +8,14 @@ const searchInput = document.querySelector(".input");
 const userInputElement = document.querySelector("input[value='users']");
 //message Element
 const messageElement = document.querySelector(".message");
+// loading Element
+const loadingElement = document.querySelector(".loader");
 
-export { cardElements, buttonElement, searchInput, userInputElement, messageElement };
+export {
+  cardElements,
+  buttonElement,
+  searchInput,
+  userInputElement,
+  messageElement,
+  loadingElement,
+};
